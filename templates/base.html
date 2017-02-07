@@ -19,7 +19,9 @@
            <li><a href="#">Blog</a></li>
            <li><a href="#">Forum</a></li>
            <li><a href="#">Contact</a></li>
-           <li><a href="#">Login</a></li>
+           <li><a href="{% url 'login' %}">Login</a></li>
+           <li><a href="{% url 'logout' %}">Log Out</a></li>
+           <li><a href="{% url 'register' %}">Register</a></li>
        </ul>
        <h1><span class="fui-settings-16 muted">Dental Surgery</span></h1>
    </div>

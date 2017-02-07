@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 2
-# Application definition
+SITE_ID = 3
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'dentist_app',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'accounts',
+    'django_forms_bootstrap',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +106,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth',
+)
+
+AUTH_USER_MODEL = 'accounts.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
