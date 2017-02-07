@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from dentist_app import views
+from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.get_index),
+    url(r'^pages/', include('django.contrib.flatpages.urls')),
 ]
