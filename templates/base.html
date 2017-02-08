@@ -22,19 +22,19 @@
 
  <body>
  <div class="mainWrap">
-  <!--
+
      <div class="wrap topbar">
     <div class="container">
     <ul class="social-media">
-   <li><a class="facebook" href="#" target="_blank">Facebook</a></li>
-  <li><a class="twitter" href="#" target="_blank">Twitter</a></li>
-  <li><a class="rss" href="#" target="_blank">Rss</a></li>
-  <li><a class="gplus" href="#" target="_blank">GPlus</a></li>
-  <li><a class="linkedin" href="#" target="_blank">Linkedin</a></li>
+   <li><a class="facebook" href="#" style="background: url('{% static 'images/icon-facebook.png' %}')">Facebook</a></li>
+  <li><a class="twitter" href="#" style="background: url('{% static 'images/icon-twitter.png' %}')">Twitter</a></li>
+  <li><a class="rss" href="#" style="background: url('{% static 'images/icon-rss.png' %}')">Rss</a></li>
+  <li><a class="gplus" href="#" style="background: url('{% static 'images/icon-gplus.png' %}')">GPlus</a></li>
+  <li><a class="linkedin" href="#" style="background: url('{% static 'images/icon-linkedin.png' %}')">Linkedin</a></li>
 
     </ul>
 </div><!--end container-->
-<!--</div><!--end topbar-->
+</div><!--end topbar-->
 
 
     <header class="wrap">
@@ -56,7 +56,7 @@
 </div><!--end container-->
 </header><!--end header-->
 
-    <hr>
+    
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -68,10 +68,10 @@
     {% endif %}
 
 
-   <div class="container">
+
        {% block content %}
        {% endblock %}
-   </div>
+
    <hr>
    <div class="footer">
        <p>Made By Frank Mullen</p>

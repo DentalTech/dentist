@@ -95,15 +95,15 @@ text-shadow: none;
 color: transparent;
 }
 
-a.facebook{background:url("images/icon-facebook.png") no-repeat 0px 0px;}   
+a.facebook{background:url("images/icon-facebook.png") no-repeat 0px 0px;}
 a.facebook:hover{background-position:-22px 0px;}   
-a.twitter{background:url("images/icon-twitter.png") no-repeat 0px 0px;}   
+a.twitter{background:url("images/icon-twitter.png") no-repeat 0px 0px;}
 a.twitter:hover{background-position:-22px 0px;}   
-a.rss{background:url("images/icon-rss.png") no-repeat 0px 0px;}   
+a.rss{background:url("images/icon-rss.png") no-repeat 0px 0px;}
 a.rss:hover{background-position:-22px 0px;}   
-a.gplus{background:url("images/icon-gplus.png") no-repeat 0px 0px;}   
+a.gplus{background:url("images/icon-gplus.png") no-repeat 0px 0px;}
 a.gplus:hover{background-position:-22px 0px;}   
-a.linkedin{background:url("images/icon-linkedin.png") no-repeat 0px 0px;}   
+a.linkedin{background:url("images/icon-linkedin.png") no-repeat 0px 0px;}
 a.linkedin:hover{background-position:-22px 0px;}   
 
 /**** END GENERAL STYLES*****/
