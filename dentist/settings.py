@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'accounts',
     'django_forms_bootstrap',
+    'reusable_blog',
+    'disqus',
 ]
 
 MIDDLEWARE = [
