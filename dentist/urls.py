@@ -18,6 +18,7 @@ from django.contrib import admin
 from dentist_app import views
 from django.conf.urls import url, include
 from accounts import views as accounts_views
+from services import views as service_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,4 +33,7 @@ urlpatterns = [
 
     #Blog URLs
     url(r'^blog/', include('reusable_blog.urls')),
+
+    #Services URLs
+    url(r'^services/$', service_views.all_services, name='services'),
 ]

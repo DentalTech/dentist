@@ -44,13 +44,16 @@
         <ul class="menu">
           <li><a href="/">HOME</a></li>
            <li><a href="/pages/about/">ABOUT</a></li>
-           <li><a href="#">SERVICES</a></li>
+           <li><a href="/services/">SERVICES</a></li>
            <li><a href="/blog/">BLOG</a></li>
            <li><a href="#">FORUM</a></li>
            <li><a href="#">CONTACT</a></li>
-           <li><a href="/login/">LOGIN</a></li>
-           <li><a href="/logout/">LOGOUT</a></li>
-           <li><a href="/register/">REGISTER</a></li>
+           {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">LOGIN</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">REGISTER</a></li>
+                <li><a href="{% url 'login' %}">LOGIN</a></li>
+            {% endif %}
         </ul>
     </nav>
 </div><!--end container-->

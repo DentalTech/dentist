@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'reusable_blog',
     'disqus',
+    'services',
 ]
 
 MIDDLEWARE = [
