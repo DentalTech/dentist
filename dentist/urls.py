@@ -19,6 +19,7 @@ from dentist_app import views
 from django.conf.urls import url, include
 from accounts import views as accounts_views
 from services import views as service_views
+from appointments import views as appointment_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -36,4 +37,7 @@ urlpatterns = [
 
     #Services URLs
     url(r'^services/$', service_views.all_services, name='services'),
+
+    #Appointments URLs
+    url(r'^appointments/$', appointment_views.all_appointments, name='appointments'),
 ]

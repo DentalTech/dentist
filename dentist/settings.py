@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'reusable_blog',
     'disqus',
     'services',
+    'appointments',
 ]
 
 MIDDLEWARE = [

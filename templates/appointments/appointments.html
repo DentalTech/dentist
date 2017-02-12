@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Patient Name</th>
+                <th>Doctor Name</th>
+                <th>Service</th>
+                <th>Price Paid</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+                <tr>
+                    <td>{{ appointment.name }}</td>
+                    <td>{{ appointment.patient_name }}</td>
+                    <td>{{ appointment.service_name }}</td>
+                    <td>GET DOCTOR NAME FROM SERIVCES TABLE</td>
+                    <td>GET PRICE PAID FROM SERVICES TABLE</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
