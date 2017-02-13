@@ -1,4 +1,5 @@
 from base import *
+import dj_database_url
 
 
 DEBUG = True
@@ -10,6 +11,9 @@ DATABASES = {
     }
 }
 
+CLEAR_DB_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+
+DATABASES['default'] = dj_database_url.parse(CLEAR_DB_URL)
 
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<your STRIPE_PUBLISHABLE key>')
