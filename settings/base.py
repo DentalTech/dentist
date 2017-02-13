@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'xmpt=ks2b6m9_imprb5dmkrfn@+2wz!oeqhqjn=bp*u2j8v9^h'
 #SECRET_KEY = '<SECRET_KEY>'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 3
 
