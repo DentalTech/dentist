@@ -16,5 +16,5 @@ DATABASES = {
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<your STRIPE_PUBLISHABLE key>')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<your STRIPE_SECRET key>')
 
-DATABASES['default'] = dj_database_url.config(default="mysql://bc5cb537891e4a:0e9e66b7@eu-cdbr-west-01.cleardb.com/heroku_27041bcc28780b7?reconnect=true")
-DATABASES['default'] = dj_database_url.parse("mysql://bc5cb537891e4a:0e9e66b7@eu-cdbr-west-01.cleardb.com/heroku_27041bcc28780b7?reconnect=true")
+DATABASES['default'] = dj_database_url.config(default="mysql://bc5cb537891e4a:0e9e66b7@eu-cdbr-west-01.cleardb.com/heroku_27041bcc28780b7")
+DATABASES['default'] = dj_database_url.parse("mysql://bc5cb537891e4a:0e9e66b7@eu-cdbr-west-01.cleardb.com/heroku_27041bcc28780b7")
