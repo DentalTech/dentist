@@ -6,7 +6,7 @@ DEBUG = True
 INSTALLED_APPS.append('debug_toolbar')
 
 # Do I need to add this to middleware classes? See https://django-debug-toolbar.readthedocs.io/en/0.11.0/installation.htmlpp
-# 'debug_toolbar.middleware.DebugToolbarMiddleware',
+MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
