@@ -11,3 +11,4 @@ reusable-blog-app==1.0.0
 six==1.10.0
 sqlparse==0.2.2
 stripe==1.46.0
+gunicorn==19.6.0
