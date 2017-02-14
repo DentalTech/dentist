@@ -9,18 +9,18 @@
 },
 {
     "model": "sessions.session",
-    "pk": "i1bisq7qmutguvqwwtf8wygbrlqvikqe",
-    "fields": {
-        "session_data": "ODEyNWYyMmE1YmVmNTExYjQ0MjNiYTZhYWI2NmQwNDBhOTg0NGQ2ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjZmZDliZTI4NThlYWIwMGYzOGY5MWQ5ZTcwMjE5MjQ2MDZhNDAxNjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9",
-        "expire_date": "2017-02-25T15:14:55.336Z"
-    }
-},
-{
-    "model": "sessions.session",
     "pk": "p7ik3j4v0jhrfzbjz65z545fj4liaxcj",
     "fields": {
         "session_data": "ZmJmNDAyMjVjYWIwMjU4MGNiOGZiMDEyNTA4YmQ2NzlhYjljMGNmMTp7Il9hdXRoX3VzZXJfaGFzaCI6IjZmZDliZTI4NThlYWIwMGYzOGY5MWQ5ZTcwMjE5MjQ2MDZhNDAxNjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
         "expire_date": "2017-02-21T16:27:42.148Z"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
     }
 },
 {
@@ -70,7 +70,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$30000$zLZMygSnqy3q$PCiaYwpjuQAsP3/37/HrinDbAZl9P14OH+SyyeB+4SM=",
-        "last_login": "2017-02-11T15:14:55.330Z",
+        "last_login": "2017-02-14T10:50:13.806Z",
         "is_superuser": true,
         "username": "frankmullen@test.com",
         "first_name": "",
@@ -166,9 +166,25 @@
         "content": "Hi, welcome to our blog.",
         "created_date": "2017-02-08T17:11:36.122Z",
         "published_date": "2017-02-08T17:11:29Z",
-        "views": 4,
+        "views": 7,
         "tag": "",
         "image": "images/dentist-158225_640.png"
+    }
+},
+{
+    "model": "reusable_blog.post",
+    "pk": 2,
+    "fields": {
+        "author": [
+            "frankmullen@test.com"
+        ],
+        "title": "Test offline blog post",
+        "content": "Hi there",
+        "created_date": "2017-02-14T10:50:40.602Z",
+        "published_date": "2017-02-14T10:50:31Z",
+        "views": 2,
+        "tag": "",
+        "image": "images/dentist-428650_640.jpg"
     }
 },
 {
@@ -493,6 +509,24 @@
         ],
         "object_id": "1",
         "object_repr": "Appointment object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2017-02-14T10:50:40.621Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "reusable_blog",
+            "post"
+        ],
+        "object_id": "2",
+        "object_repr": "Test offline blog post",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
