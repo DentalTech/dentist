@@ -20,6 +20,7 @@ from django.conf.urls import url, include
 from accounts import views as accounts_views
 from services import views as service_views
 from appointments import views as appointment_views
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -34,6 +35,7 @@ urlpatterns = [
 
     #Blog URLs
     url(r'^blog/', include('reusable_blog.urls')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
     #Services URLs
     url(r'^services/$', service_views.all_services, name='services'),

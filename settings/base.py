@@ -129,3 +129,7 @@ STATICFILES_DIRS = ( os.path.join(PROJECT_ROOT, 'static'), )
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# Path to Images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
