@@ -212,6 +212,22 @@
     }
 },
 {
+    "model": "reusable_blog.post",
+    "pk": 4,
+    "fields": {
+        "author": [
+            "frankmullen@test.com"
+        ],
+        "title": "Second db update test",
+        "content": "Test again",
+        "created_date": "2017-02-14T12:15:46.624Z",
+        "published_date": "2017-02-14T12:15:33Z",
+        "views": 0,
+        "tag": "",
+        "image": "images/homer_woohoo.jpg"
+    }
+},
+{
     "model": "services.service",
     "pk": 1,
     "fields": {
@@ -589,6 +605,24 @@
         "object_repr": "Dentist Blog Test",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2017-02-14T12:15:46.639Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "reusable_blog",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "Second db update test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
 }
 ]
