@@ -9,6 +9,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "49hgwmg3ob7b0l85f9tl9h9a19b4nn76",
+    "fields": {
+        "session_data": "ODk3ZGVlODAzOGJlZjZhMDU2OTUwOTUyMWU1NWY5ODM2YTA1ZDQ0ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjU5MzE1YzIxMzkzMTAxYWNjZmY4Yjg4NmUwNTk4NTA4OGM1ZGYwYjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-02-28T12:06:52.953Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "p7ik3j4v0jhrfzbjz65z545fj4liaxcj",
     "fields": {
         "session_data": "ZmJmNDAyMjVjYWIwMjU4MGNiOGZiMDEyNTA4YmQ2NzlhYjljMGNmMTp7Il9hdXRoX3VzZXJfaGFzaCI6IjZmZDliZTI4NThlYWIwMGYzOGY5MWQ5ZTcwMjE5MjQ2MDZhNDAxNjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
@@ -70,7 +78,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$30000$zLZMygSnqy3q$PCiaYwpjuQAsP3/37/HrinDbAZl9P14OH+SyyeB+4SM=",
-        "last_login": "2017-02-14T10:50:13.806Z",
+        "last_login": "2017-02-14T12:06:52.947Z",
         "is_superuser": true,
         "username": "frankmullen@test.com",
         "first_name": "",
@@ -166,9 +174,9 @@
         "content": "Hi, welcome to our blog.",
         "created_date": "2017-02-08T17:11:36.122Z",
         "published_date": "2017-02-08T17:11:29Z",
-        "views": 7,
+        "views": 8,
         "tag": "",
-        "image": "images/dentist-158225_640.png"
+        "image": "images/dentist-998830_640.jpg"
     }
 },
 {
@@ -182,9 +190,25 @@
         "content": "Hi there",
         "created_date": "2017-02-14T10:50:40.602Z",
         "published_date": "2017-02-14T10:50:31Z",
-        "views": 2,
+        "views": 3,
         "tag": "",
         "image": "images/dentist-428650_640.jpg"
+    }
+},
+{
+    "model": "reusable_blog.post",
+    "pk": 3,
+    "fields": {
+        "author": [
+            "frankmullen@test.com"
+        ],
+        "title": "Test db update post",
+        "content": "Testing",
+        "created_date": "2017-02-14T12:07:34.763Z",
+        "published_date": "2017-02-14T12:07:17Z",
+        "views": 1,
+        "tag": "",
+        "image": "images/dentist-1639683_640.jpg"
     }
 },
 {
@@ -529,6 +553,42 @@
         "object_repr": "Test offline blog post",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2017-02-14T12:07:34.782Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "reusable_blog",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "Test db update post",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2017-02-14T12:07:49.497Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "reusable_blog",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Dentist Blog Test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
     }
 }
 ]
