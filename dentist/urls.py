@@ -21,6 +21,7 @@ from accounts import views as accounts_views
 from services import views as service_views
 from appointments import views as appointment_views
 from django.conf import settings
+from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
