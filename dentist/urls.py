@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
 
     #Blog URLs
     url(r'^blog/', include('reusable_blog.urls')),
@@ -43,4 +44,6 @@ urlpatterns = [
 
     #Appointments URLs
     url(r'^appointments/$', appointment_views.all_appointments, name='appointments'),
+
+
 ]

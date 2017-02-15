@@ -53,6 +53,7 @@
            <li><a href="#">CONTACT</a></li>
            {% if user.is_authenticated %}
                 <li><a href="{% url 'appointments' %}">APPOINTMENTS</a></li>
+               <li><a href="{% url 'profile' %}">PROFILE</a></li>
                 <li><a href="{% url 'logout' %}">LOGOUT</a></li>
             {% else %}
                 <li><a href="{% url 'register' %}">REGISTER</a></li>
