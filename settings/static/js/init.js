@@ -46,11 +46,11 @@ $(this).toggleClass('active').next().slideDown();
   return false; 
  });			
 
- $('#tweets').tweet({
+ /*$('#tweets').tweet({
 				modpath: 'twitter/',
 				count: 3,
 				username : 'flashuser',
 				loading_text: 'loading tweets...'
 	                         });
 	
-	});
+	});*/
