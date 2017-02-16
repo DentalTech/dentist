@@ -13,3 +13,4 @@ sqlparse==0.2.2
 stripe==1.46.0
 gunicorn==19.6.0
 whitenoise==3.3.0
+arrow==0.10.0
