@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block head_js %}
+  <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script type="text/javascript">
+      //<![CDATA[
+      Stripe.publishableKey = '{{ publishable }}';
+      //]]>
+  </script>
+  <script type="text/javascript" src="{% static "js/stripe.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Welcome To The Gold Clients Membership Programme!</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
+
+<div class="wrap margin-block">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p>Our Gold Clients Membership Programme allows you to spread the cost of your bi-annual dental hygiene and checkup visits throughout the year with a substantial saving. Instead of paying €70 for each visit, you pay €9.75 a month, which comes to €58.50 per visit and gives you a saving of 15% on your routine dental costs.</p>
+<p> Your Gold Membership also entitles you to a 10% discount on the following services:</p>
+</div><!--end col-md-12-->
+</div><!--end row-->
+
+<div class="row main-table">
+
+<div class="col-md-12 table-column">
+<h4 class="pt-title">Pricing Table - Full Prices</h4>
+<ul class="pt-features">
+    <li class="clearfix">
+<div class="pt-item-title">Cavity Therapy</div>
+<div class="pt-item-price">€80</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Panoramic X-Ray</div>
+<div class="pt-item-price">€90</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Dental Implant</div>
+<div class="pt-item-price">€400</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Extraction of single root teeth </div>
+<div class="pt-item-price">€100</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Extraction of multi root teeth </div>
+<div class="pt-item-price">€120</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Wisdom teeth removal</div>
+<div class="pt-item-price">€180</div>
+</li>
+<li class="clearfix">
+<div class="pt-item-title">Dental emergency service during non - working hours</div>
+<div class="pt-item-price">€110</div>
+</li>
+</ul>
+</div><!--end table-col -->
+</div><!--end row-->
+
+<hr/>
+
+<form role="form" method="post" id="register-form" action="{% url 'register' %}">
+    <div id="credit-card-errors" style="display:none">
+      <div class="alert-message block-message error" id="stripe-error-message"></div>
+    </div>
+
+    <legend>Join the Gold Membership Programme Now (€9.75 per month)</legend>
+    {% csrf_token %}
+    {{ form|as_bootstrap }}
+    <div class="form-group">
+      <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit" value="Validate Credit Card">
+    </div>
+  </form>
+
+
+
+<div class="row">
+<div class="col-md-12">
+<p>After you pay you'll be brought to our membership area where you can schedule your first appointment.</p>
+</div><!--end col-md-12-->
+</div><!--end row-->
+
+</div><!--end container-->
+</div><!--end wrap-->
+
+
+{% endblock %}

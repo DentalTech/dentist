@@ -44,13 +44,13 @@ $(this).toggleClass('active').next().slideDown();
    $('h4.trigger').removeClass('active').next().slideUp();
  }
   return false; 
- });			
+ });
 
- /*$('#tweets').tweet({
+ $('#tweets').tweet({
 				modpath: 'twitter/',
 				count: 3,
 				username : 'flashuser',
 				loading_text: 'loading tweets...'
 	                         });
 	
-	});*/
+	});

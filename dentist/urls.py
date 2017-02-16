@@ -26,10 +26,10 @@ from django.views.static import serve
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.get_index, name='index'),
-    url(r'^pages/', include('django.contrib.flatpages.urls')),
+    url(r'^ourteam/$', views.get_ourteam, name='ourteam'),
 
     #Authentication URLs
-    url(r'^register/$', accounts_views.register, name='register'),
+    url(r'^membership/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),

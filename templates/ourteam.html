@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Our Team</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
+
+<div class="wrap margin-block">
+<div class="container">
+<div class="row">
+<div class="span12">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod, lectus at ullamcorper faucibus, tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod, lectus at ullamcorper faucibus, tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div><!--end col-md-12-->
+</div><!--end row-->
+
+<div class="row">
+<div class="col-md-3 team-member">
+<p class="img-feature"><img src="{% static "images/team/team-1.jpg" %}" alt=""/></p>
+<h2>Dr. Marie Doe</h2>
+<h4>Manager</h4>
+<p>Duis eu leo est, id dignissim enim. Vestibulum turpis ante, consequat id interdum sit amet, sollicitudin sit amet odio. Pellentesque placerat nulla at quam semper vitae ullamcorper eros lacinia.</p>
+</div><!--end team-member-->
+
+<div class="col-md-3 team-member">
+<p class="img-feature"><img src="{% static "images/team/team-2.jpg" %}" alt=""/></p>
+<h2>Dr. Olivia Doe</h2>
+<h4>Dentist</h4>
+<p>Duis eu leo est, id dignissim enim. Vestibulum turpis ante, consequat id interdum sit amet, sollicitudin sit amet odio. Pellentesque placerat nulla at quam semper vitae ullamcorper eros lacinia.</p>
+</div><!--end team-member-->
+
+<div class="col-md-3 team-member">
+<p class="img-feature"><img src="{% static "images/team/team-3.jpg" %}" alt=""/></p>
+<h2>Dr. Michael Doe</h2>
+<h4>Dentist</h4>
+<p>Duis eu leo est, id dignissim enim. Vestibulum turpis ante, consequat id interdum sit amet, sollicitudin sit amet odio. Pellentesque placerat nulla at quam semper vitae ullamcorper eros lacinia.</p>
+</div><!--end team-member-->
+
+<div class="col-md-3 team-member">
+<p class="img-feature"><img src="{% static "images/team/team-4.jpg" %}" alt=""/></p>
+<h2>Robin Doe</h2>
+<h4>Dental assistant</h4>
+<p>Duis eu leo est, id dignissim enim. Vestibulum turpis ante, consequat id interdum sit amet, sollicitudin sit amet odio. Pellentesque placerat nulla at quam semper vitae ullamcorper eros lacinia.</p>
+</div><!--end team-member-->
+</div><!--end row-->
+
+<div class="row">
+<div class="col-md-12 margin-block">
+<header class="home-title">
+<h3>Our Mission</h3>
+</header>
+
+<div class="row">
+<div class="col-md-6 block-3col">
+<p>In justo risus, fermentum eget egestas eget, elementum vitae tortor. Maecenas lorem mi, interdum id commodo ac, tincidunt vitae magna. In hac habitasse platea dictumst. Pellentesque quam justo, aliquam non accumsan a, aliquam id dolor.</p>
+<p>Duis aliquet imperdiet varius. Nullam malesuada sem vel nisi faucibus iaculis. Curabitur aliquam ante in lacus adipiscing accumsan. Morbi placerat libero at dolor condimentum ut lobortis magna varius. Ut ante purus, suscipit nec interdum quis, elementum vel lorem. </p>
+
+</div>
+<div class="col-md-6  faq-questions block-3col">
+<h4 class="trigger"><a href="#q1">Cosmetic Dentistry</a></h4>
+<div id="q1" class="toggle_container">
+<p>Sed nec laoreet sem. Proin in velit diam. Morbi dictum ultricies magna ultricies vulputate. Cras tempus mi a mi gravida id egestas ante hendrerit. Proin mauris massa, congue volutpat vulputate gravida, adipiscing vel neque. Ut rutrum, mi sit amet fringilla adipiscing, mauris arcu porta sem, eu volutpat metus orci in tellus.</p>
+</div>
+<h4 class="trigger"><a href="#q2">Oral Surgery</a></h4>
+<div id="q2" class="toggle_container">
+<p>Sed nec laoreet sem. Proin in velit diam. Morbi dictum ultricies magna ultricies vulputate. Cras tempus mi a mi gravida id egestas ante hendrerit. Proin mauris massa, congue volutpat vulputate gravida, adipiscing vel neque. Ut rutrum, mi sit amet fringilla adipiscing, mauris arcu porta sem, eu volutpat metus orci in tellus.</p>
+</div>
+<h4 class="trigger"><a href="#q3">Dental Implants</a></h4>
+<div id="q3" class="toggle_container">
+<p>Sed nec laoreet sem. Proin in velit diam. Morbi dictum ultricies magna ultricies vulputate. Cras tempus mi a mi gravida id egestas ante hendrerit. Proin mauris massa, congue volutpat vulputate gravida, adipiscing vel neque. Ut rutrum, mi sit amet fringilla adipiscing, mauris arcu porta sem, eu volutpat metus orci in tellus.</p>
+</div>
+</div>
+</div>
+
+</div><!--end col-md-12-->
+</div><!--end row-->
+
+</div><!--end container-->
+</div><!--end wrap-->
+{% endblock %}

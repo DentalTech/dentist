@@ -51,7 +51,7 @@ def register(request):
     args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
     args.update(csrf(request))
 
-    return render(request, 'register.html', args)
+    return render(request, 'membership.html', args)
 
 
 @login_required(login_url='/login/')
