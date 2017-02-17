@@ -7,7 +7,6 @@ olefile==0.44
 pbr==1.10.0
 Pillow==4.0.0
 requests==2.13.0
-git+https://github.com/frankmullen/reusable-blog-app.git
 six==1.10.0
 sqlparse==0.2.2
 stripe==1.46.0

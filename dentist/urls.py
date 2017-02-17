@@ -22,6 +22,7 @@ from services import views as service_views
 from appointments import views as appointment_views
 from django.conf import settings
 from django.views.static import serve
+from blog import views as blog_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -36,7 +37,11 @@ urlpatterns = [
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
 
     #Blog URLs
-    url(r'^blog/', include('reusable_blog.urls')),
+    url(r'^blog/$', blog_views.post_list, name="post_list"),
+    url(r'^blog/(?P<id>\d+)/$', blog_views.post_detail),
+
+
+    #Media URLs
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
     #Services URLs

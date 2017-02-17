@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'accounts',
     'django_forms_bootstrap',
-    'reusable_blog',
+    'blog',
     'disqus',
     'services',
     'appointments',
@@ -133,3 +133,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Path to Images
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Disqus settings
+DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
