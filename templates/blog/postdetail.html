@@ -1,7 +1,21 @@
 {% extends "blog/blogbase.html" %}
 {% load staticfiles %}
-{% block blogcontent %}
 
+{% block blogtitle %}
+
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>{{ post.title }}</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
+{% endblock %}
+
+{% block blogcontent %}
 
 <article class="col-md-9 blog-post-single">
 {% if post.image %}
