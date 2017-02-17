@@ -1,21 +1,7 @@
-{% extends "base.html" %}
+{% extends "blog/blogbase.html" %}
 {% load staticfiles %}
-{% block content %}
+{% block blogcontent %}
 
-<div class="wrap">
-<div class="container home-apoint">
-<div class="row">
-<div class="col-md-12 home-apoint-text">
-<h2>{{ post.title }}</h2>
-</div>
-</div><!--end row-->
-</div><!--end container-->
-</div><!--end wrap-->
-
-
-<div class="wrap margin-block">
-<div class="container">
-<div class="row">
 
 <article class="col-md-9 blog-post-single">
 {% if post.image %}
@@ -23,7 +9,7 @@
     <img class="img-responsive" src="/media/{{ post.image}}" alt=""/>
     </div><!--end gal-img-->
 {% endif %}
-<div class="news-info">{{ post.published_date }} | Views {{ post.views }} | <a href="#">{{ post.tag }}</a></div>
+<div class="news-info">{{ post.published_date }} | Views {{ post.views }} <a href="#">{{ post.tag }}</a></div>
 <div class="content">
 <h2 class="title-blog-post">{{ post.title }}</h2>
 
@@ -36,115 +22,6 @@
 </div><!--end content-->
 </article><!--col-md-9-->
 
-
-
-
-<aside class="col-md-3">
-<ul>
-<li id="search-field">
-<form id="search-form">
-<span><input type="text" name="s" id="search-string" onFocus="if(this.value=='search..')this.value='';" onBlur="if(this.value=='')this.value='search..';" value="search.."/>
-</span>
-</form>
-</li><!--end search-->
-<li>
-<header class="sidebar-title">
-<h3>Schedule</h3>
-</header>
-<div class="schedule">
-<ul>
-<li class="clearfix">
-<div class="pt-item-title">Monday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Tuesday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Wednesday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Thursday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Friday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Saturday</div>
-<div class="pt-item-price">09:00 - 18:00</div>
-</li>
-<li class="clearfix">
-<div class="pt-item-title">Sunday</div>
-<div class="pt-item-price">Closed</div>
-</li>
-</ul>
-</div>
-</li><!--end schedule-->
-<li>
-<header class="sidebar-title">
-<h3>Recent News</h3>
-</header>
-<div class="sidebar-news">
-<ul>
-<li>
-<div class="snews-date">May 12, 2013</div>
-<div class="snews-title"><a href="#">Pellentesque bibendum</a></div>
-</li>
-<li>
-<div class="snews-date">May 11, 2013</div>
-<div class="snews-title"><a href="#">Quisque tincidunt</a></div>
-</li>
-<li>
-<div class="snews-date">May 10, 2013</div>
-<div class="snews-title"><a href="#">Sed massa nunc</a></div>
-</li>
-<li>
-<div class="snews-date">April 28, 2013</div>
-<div class="snews-title"><a href="#">Vestibulum ante ipsum</a></div>
-</li>
-<li>
-<div class="snews-date">April 16, 2013</div>
-<div class="snews-title"><a href="#">Pulvinar massa id ligula</a></div>
-</li>
-</ul>
-</div>
-</li><!--end recent news-->
-<li>
-<header class="sidebar-title">
-<h3>Archive</h3>
-</header>
-<div class="sidebar-archive">
-<ul>
-<li><a href="#">May 2013</a></li>
-<li><a href="#">April 2013</a></li>
-<li><a href="#">March 2013</a></li>
-<li><a href="#">February 2013</a></li>
-</ul>
-</div>
-</li><!--end archive-->
-<li>
-<header class="sidebar-title">
-<h3>Appointment</h3>
-</header>
-<div class="sidebar-appoint">
-<p>Donec accumsan sollicitudin leo in mollis. Pellentesque mi neque, imperdiet ac porttitor.</p>
-<div class="home-apoint-btn">
-<a href="#">Make an Appointment</a>
-</div>
-</div>
-</li><!--end recent news-->
-
-</ul>
-</aside><!--end sidebar-->
-
-</div><!--end row-->
-
-</div><!--end container-->
-</div><!--end wrap-->
 
 {% endblock %}
 

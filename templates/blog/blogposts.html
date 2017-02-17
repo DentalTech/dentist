@@ -1,27 +1,36 @@
-{% extends "base.html" %}
+{% extends "blog/blogbase.html" %}
 
-{% block content %}
-    {% for post in posts %}
-        <div class="row">
-            <hr>
-            <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-img" href="#">
-                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
-                </a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-                <h3>{{ post.title }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <div class="col-xs-9">
-                            <p>{{ post.content|truncatewords:30 }}</p>
-                            <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
-                            <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
+{% block blogcontent %}
+
+
+<div class="col-md-9">
+
+<div class="row">
+
+{% for post in posts %}
+<article class="col-md-12 blog-post">
+<div class="news-info">{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</div>
+<div class="gal-img">
+<a href="#"><img class="img-responsive" src="/media/{{ post.image}}" alt=""/></a>
+</div><!--end gal-img-->
+<div>
+<h2 class="title-blog-post"><a href="#">{{ post.title }}</a></h2>
+<p>{{ post.content|truncatewords:57 }}</p>
+</div>
+<div class="read-more"><a href={{ post.id }}>Read More</a></div>
+</article><!--col-md-12-->
+
+{% endfor %}
+
+
+
+
+</div><!--end row-->
+<!--
+	<div class="prev-next">
+	<span class="pages">Page 1 of 3: </span> <span class='page-numbers current'>1</span> <a class='page-numbers' href='#' title='Page 2'>2</a> <a class='page-numbers' href='#' title='Page 3'>3</a>
+    </div>
+-->
+</div><!--end col-md-9-->
 
 {% endblock %}
