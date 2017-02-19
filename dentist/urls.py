@@ -49,6 +49,7 @@ urlpatterns = [
 
     #Appointments URLs
     url(r'^appointments/$', appointment_views.all_appointments, name='appointments'),
+    url(r'^create_appointment/$', appointment_views.create_appointment, name='create_appointment'),
 
 
 ]

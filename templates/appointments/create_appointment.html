@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- create appointment form -->
+    <form role="form" method="post" id="appointment-form" action="{% url 'create_appointment' %}">
+
+    <legend>Create Appointment</legend>
+    {% csrf_token %}
+    {{ form }}
+    <div class="form-group">
+      <input class="btn btn-primary" name="commit" type="submit" value="Submit">
+    </div>
+  </form>
+
+{% endblock %}

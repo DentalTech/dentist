@@ -33,14 +33,6 @@
 },
 {
     "model": "sites.site",
-    "pk": 2,
-    "fields": {
-        "domain": "example.com",
-        "name": "example.com"
-    }
-},
-{
-    "model": "sites.site",
     "pk": 3,
     "fields": {
         "domain": "localhost",
@@ -365,17 +357,6 @@
     }
 },
 {
-    "model": "appointments.appointment",
-    "pk": 1,
-    "fields": {
-        "date": "2017-02-15T12:00:00Z",
-        "patient_name": [
-            "rechi@test.com"
-        ],
-        "service_name": 1
-    }
-},
-{
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
@@ -521,24 +502,6 @@
 },
 {
     "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-        "action_time": "2017-02-08T17:11:36.125Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "1",
-        "object_repr": "Dentist Blog Test",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
     "pk": 10,
     "fields": {
         "action_time": "2017-02-09T16:22:42.601Z",
@@ -647,96 +610,6 @@
 },
 {
     "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2017-02-14T10:50:40.621Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "2",
-        "object_repr": "Test offline blog post",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2017-02-14T12:07:34.782Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "3",
-        "object_repr": "Test db update post",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2017-02-14T12:07:49.497Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "1",
-        "object_repr": "Dentist Blog Test",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2017-02-14T12:15:46.639Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "4",
-        "object_repr": "Second db update test",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2017-02-14T12:21:35.830Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "5",
-        "object_repr": "DB Update test 3",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
     "pk": 21,
     "fields": {
         "action_time": "2017-02-16T08:56:00.910Z",
@@ -771,114 +644,9 @@
         "change_message": ""
     }
 },
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2017-02-16T12:14:44.943Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "5",
-        "object_repr": "DB Update test 3",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2017-02-16T12:14:44.971Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "4",
-        "object_repr": "Second db update test",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-        "action_time": "2017-02-16T12:14:44.992Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "3",
-        "object_repr": "Test db update post",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-        "action_time": "2017-02-16T12:14:45.023Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "2",
-        "object_repr": "Test offline blog post",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-        "action_time": "2017-02-16T12:14:45.043Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "reusable_blog",
-            "post"
-        ],
-        "object_id": "1",
-        "object_repr": "Dentist Blog Test",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-        "action_time": "2017-02-16T13:06:33.647Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "blog",
-            "post"
-        ],
-        "object_id": "1",
-        "object_repr": "Test Blog Post",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
+
+
+
 {
     "model": "admin.logentry",
     "pk": 29,
