@@ -1,19 +1,47 @@
-{% extends "base.html" %}
+{% extends "forum/forumbase.html" %}
 {% load thread_extras %}
-{% block content %}
-<div class="container">
- <div class="row header">
-   <div class="jumbotron"><h1>{{ subject.name }}</h1></div>
- </div>
- <div class="col-md-12">
-   {% if user.is_authenticated %}
-     <p>
-       <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
-     </p>
-   {% endif %}
-   {% for thread in subject.threads.all %}
-     {% include "forum/thread_item.html" %}
-   {% endfor %}
- </div>
+
+{% block forumtitle %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Forum</h2>
 </div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+{% endblock %}
+
+{% block forumcontent %}
+<div class="container">
+<ol class="breadcrumb pull-left where-am-i">
+    <li><a href="/forum/">Forum</a></li>
+    <li><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></li>
+    <li class="active">List of Threads</li>
+    </ol>
+</div>
+<div>
+
+  <table class="table forum table-striped">
+    <thead>
+      <tr>
+        <th class="cell-stat"></th>
+        <th>
+          <h3>{{ subject.name }}</h3>
+        </th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for thread in subject.threads.all %}
+        {% include "forum/thread_item.html" %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
 {% endblock %}
