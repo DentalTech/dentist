@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'disqus',
     'services',
     'appointments',
+    'tinymce',
+    'emoticons',
+    'threads',
+    'polls',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +140,6 @@ MEDIA_URL = '/media/'
 
 # Disqus settings
 DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
