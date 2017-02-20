@@ -28,7 +28,7 @@
 <a href="#"><img class="img-responsive" src="/media/{{ post.image}}" alt=""/></a>
 </div><!--end gal-img-->
 <div>
-<h2 class="title-blog-post"><a href="#">{{ post.title }}</a></h2>
+<h2 class="title-blog-post"><a href={{ post.id }}>{{ post.title }}</a></h2>
 <p>{{ post.content|truncatewords:57 }}</p>
 </div>
 <div class="read-more"><a href={{ post.id }}>Read More</a></div>

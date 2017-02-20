@@ -120,6 +120,8 @@ border: 1px solid #0bb1e5;}
 
 /**** END BLOG *****/
 
+
+
 /**** SIDEBAR *****/
 input#search-string{background:#f0f0f0;
 border:1px solid #f0f0f0;
@@ -169,6 +171,26 @@ background:#e0e0e0;
 color:#E0E0E0;
 text-decoration:none;
 }
+
+/**** FORUM *****/
+.forumhead,.forumhead a {
+    color:#353535;
+    text-decoration:none;
+}
+.forumhead a:hover{
+    color:#0bb1e5;
+}
+
+.forumsubhead, .forumsubhead a {
+    color:#353535;
+    text-decoration:underline;
+}
+.forumsubhead a:hover{
+    color:#0bb1e5;
+}
+
+/**** END FORUM *****/
+
 .tweet_list .tweet_time a:hover{color:#E0E0E0;}
 
 @media (min-width: 768px) and (max-width: 979px) {

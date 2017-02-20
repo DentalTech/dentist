@@ -12,6 +12,10 @@ def get_total_subject_posts(subject):
         total_posts += thread.posts.count()
     return total_posts
 
+@register.filter
+def get_total_thread_posts(thread):
+    return thread.posts.count()
+
 
 @register.filter
 def started_time(created_at):
