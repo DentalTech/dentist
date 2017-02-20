@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load thread_extras %}
 {% block content %}
+<div class="container">
    {% load bootstrap_tags %}
    {% for subject in subjects %}
        <section class="subject">
@@ -22,4 +23,5 @@
            </table>
        </section>
    {% endfor %}
+</div>
 {% endblock %}
