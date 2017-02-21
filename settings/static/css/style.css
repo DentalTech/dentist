@@ -685,6 +685,10 @@ margin-top:22px;}
 .forum.table th.cell-stat-2x {
     width: 14em;
 }
+
+.new-thread p {
+    padding-left: 250px;
+}
 /**** END FORUM STYLES*****/
 
 

@@ -14,13 +14,25 @@
 {% endblock %}
 
 {% block forumcontent %}
-<div class="container">
+
 <ol class="breadcrumb pull-left where-am-i">
     <li><a href="/forum/">Forum</a></li>
-    <li><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></li>
-    <li class="active">List of Threads</li>
+    <li class="active">{{ subject.name }}</li>
+    <!--<li><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></li>-->
+
     </ol>
+<div class="container new-thread">
+
+
+    {% if user.is_authenticated %}
+        <p>
+            <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+        </p>
+    {% endif %}
+
 </div>
+
+
 <div>
 
   <table class="table forum table-striped">
@@ -39,9 +51,12 @@
         {% for thread in subject.threads.all %}
         {% include "forum/thread_item.html" %}
       {% endfor %}
+
+
     </tbody>
   </table>
 
+<hr/>
 </div>
 
 {% endblock %}

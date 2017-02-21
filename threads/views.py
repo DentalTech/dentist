@@ -14,8 +14,6 @@ from polls.models import PollSubject
 def forum(request):
     return render(request, 'forum/forum.html', {'subjects': Subject.objects.all()})
 
-def testforum(request):
-    return render(request, 'forum/testforum.html', {'subjects': Subject.objects.all()})
 
 def threads(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)

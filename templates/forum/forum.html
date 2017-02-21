@@ -16,8 +16,8 @@
 {% block forumcontent %}
 <div class="container">
 <ol class="breadcrumb pull-left where-am-i">
-      <li><a href="/forum/">Forum</a></li>
-      <li class="active">List of Subjects</li>
+      <li>Forum</li>
+      <li class="active">Categories</li>
     </ol>
 </div>
 <div>
@@ -27,7 +27,7 @@
       <tr>
         <th class="cell-stat"></th>
         <th>
-          <h3>Forum Subjects</h3>
+          <h3>Forum Categories</h3>
         </th>
         <th class="cell-stat text-center hidden-xs hidden-sm">Threads</th>
         <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
@@ -43,6 +43,7 @@
         <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
         <td>
           <h4><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h4>
+          <h6>{% autoescape off %}{{ subject.description }}{% endautoescape %}</h6>
         </td>
         <td class="text-center hidden-xs hidden-sm">{{ subject.threads.count }}</td>
         <td class="text-center hidden-xs hidden-sm">{{ subject|get_total_subject_posts }}</td>
@@ -51,7 +52,7 @@
       {% endfor %}
     </tbody>
   </table>
-
+<hr/>
 </div>
 
 {% endblock %}

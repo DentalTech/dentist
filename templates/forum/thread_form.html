@@ -1,6 +1,9 @@
-{% extends "base.html" %}
+{% extends "forum/forumbase.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
+{% load thread_extras %}
+
+
 
 {% block head_js %}
    <script type="text/javascript" src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
@@ -11,9 +14,30 @@
    </script>
 {% endblock %}
 
+{% block forumtitle %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Forum</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+{% endblock %}
 
-{% block content %}
-   <section>
+
+{% block forumcontent %}
+<div class="container">
+<ol class="breadcrumb pull-left where-am-i">
+    <li><a href="/forum/">Forum</a></li>
+    <li><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></li>
+    <li class="active">New Thread</li>
+
+    </ol>
+</div>
+<br/>
+<div class="container">
        <div class="col-md-9">
            <form method="post" action="{% url 'new_thread' subject.id %}">
                {% csrf_token %}
@@ -34,7 +58,8 @@
                </div>
            </form>
        </div>
-   </section>
+
+</div>
   <!-- JQuery Stuff to go in here -->
     <script>
     $(function() {
@@ -54,3 +79,9 @@
     })
     </script>
 {% endblock %}
+
+
+
+
+
+

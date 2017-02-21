@@ -1,11 +1,42 @@
-{% extends "base.html" %}
-{% load thread_extras %}
+{% extends "forum/forumbase.html" %}
+{% load bootstrap_tags %}
 {% load staticfiles %}
-{% block content %}
+{% load thread_extras %}
 
- <div class="row header">
 
-   <div class="container">
+
+{% block head_js %}
+   <script type="text/javascript" src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script type="application/javascript">
+       tinyMCE.init({mode: "textareas", theme: 'modern', plugins: 'paste'})
+
+   </script>
+{% endblock %}
+
+{% block forumtitle %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Forum</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+{% endblock %}
+
+
+{% block forumcontent %}
+<div class="container">
+<ol class="breadcrumb pull-left where-am-i">
+    <li><a href="/forum/">Forum</a></li>
+    <li><a href="{% url 'threads' thread.subject.id %}">{{ thread.subject.name }}</a></li>
+    <li class="active">{{ thread.name }}</li>
+</ol>
+</div>
+<br/>
+<div class="container">
      <h2>{{ thread.name }}</h2>
      <div class="col-md-12">
          <table class="table">
@@ -67,4 +98,7 @@
      {% include "forum/post.html" %}
    {% endfor %}
  </div>
+
 {% endblock %}
+
+
