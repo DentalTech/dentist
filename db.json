@@ -33,6 +33,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "7grhyuzukd2nhp1rk9nh7cuggy2uwzsl",
+    "fields": {
+        "session_data": "NDU4YmZlMDRhODQ1OWVhMjEwYTBhMTBiOWNkOWExZDFkYzNmODg5NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjU5MzE1YzIxMzkzMTAxYWNjZmY4Yjg4NmUwNTk4NTA4OGM1ZGYwYjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9",
+        "expire_date": "2017-03-08T14:28:43.769Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "kegmwi07lj8djyvtgrf17miqlszrx5ak",
     "fields": {
         "session_data": "ODk3ZGVlODAzOGJlZjZhMDU2OTUwOTUyMWU1NWY5ODM2YTA1ZDQ0ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjU5MzE1YzIxMzkzMTAxYWNjZmY4Yjg4NmUwNTk4NTA4OGM1ZGYwYjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
@@ -84,7 +92,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$30000$zLZMygSnqy3q$PCiaYwpjuQAsP3/37/HrinDbAZl9P14OH+SyyeB+4SM=",
-        "last_login": "2017-02-21T12:23:43.044Z",
+        "last_login": "2017-02-22T14:28:43.717Z",
         "is_superuser": true,
         "username": "frankmullen@test.com",
         "first_name": "",
@@ -144,7 +152,7 @@
     "pk": 4,
     "fields": {
         "password": "pbkdf2_sha256$30000$X3QhtEYLF3Ek$TQ8SBeUIpGP6jZNSTSSQBHYT5SHnjfaYZl3Vp+oYCz4=",
-        "last_login": "2017-02-19T10:58:01.360Z",
+        "last_login": "2017-02-22T12:39:59.978Z",
         "is_superuser": false,
         "username": "josh@test.com",
         "first_name": "",
@@ -164,7 +172,7 @@
     "pk": 5,
     "fields": {
         "password": "pbkdf2_sha256$30000$gL0wGgU2KfdE$yKoxA39cVzrv031d+f0WJTSG3UDHYQs3nxiMkBXB3Kw=",
-        "last_login": null,
+        "last_login": "2017-02-22T12:35:47.238Z",
         "is_superuser": false,
         "username": "machu@test.com",
         "first_name": "",
@@ -204,7 +212,7 @@
     "pk": 7,
     "fields": {
         "password": "pbkdf2_sha256$30000$2v9hiW9MWXu3$MMuwl+qEfMDUHwxzRFyhmABH2BGR7Xl6ZjQ0Hk6pLi4=",
-        "last_login": "2017-02-15T13:14:39.990Z",
+        "last_login": "2017-02-22T14:10:03.337Z",
         "is_superuser": false,
         "username": "isabel@test.com",
         "first_name": "",
@@ -394,6 +402,83 @@
         "name": "Service 5",
         "description": "Test service 5",
         "price": "50.00"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 1,
+    "fields": {
+        "patient_name": [
+            "rechi@test.com"
+        ],
+        "appointment_date": "2017-02-23",
+        "appointment_time": "14:00"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 5,
+    "fields": {
+        "patient_name": [
+            "josh@test.com"
+        ],
+        "appointment_date": "2017-02-07",
+        "appointment_time": "15:00"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 6,
+    "fields": {
+        "patient_name": [
+            "frankmullen@test.com"
+        ],
+        "appointment_date": "2017-02-22",
+        "appointment_time": "08:30"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 7,
+    "fields": {
+        "patient_name": [
+            "frankmullen@test.com"
+        ],
+        "appointment_date": "2017-02-22",
+        "appointment_time": "08:30"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 8,
+    "fields": {
+        "patient_name": [
+            "isabel@test.com"
+        ],
+        "appointment_date": "2017-02-25",
+        "appointment_time": "14:30"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 9,
+    "fields": {
+        "patient_name": [
+            "frankmullen@test.com"
+        ],
+        "appointment_date": "2017-02-27",
+        "appointment_time": "16:00"
+    }
+},
+{
+    "model": "appointments.appointment",
+    "pk": 10,
+    "fields": {
+        "patient_name": [
+            "frankmullen@test.com"
+        ],
+        "appointment_date": "2017-04-21",
+        "appointment_time": "14:00"
     }
 },
 {
@@ -1501,6 +1586,78 @@
         ],
         "object_id": "1",
         "object_repr": "Thread object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2017-02-22T12:27:41.639Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "appointments",
+            "appointment"
+        ],
+        "object_id": "1",
+        "object_repr": "2017-02-23 - 14:00 - rechi@test.com",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2017-02-22T12:42:30.002Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "appointments",
+            "appointment"
+        ],
+        "object_id": "4",
+        "object_repr": "2017-02-26 - 1 - josh@test.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2017-02-22T12:42:30.061Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "appointments",
+            "appointment"
+        ],
+        "object_id": "3",
+        "object_repr": "2017-03-03 - 0 - josh@test.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2017-02-22T12:42:30.066Z",
+        "user": [
+            "frankmullen@test.com"
+        ],
+        "content_type": [
+            "appointments",
+            "appointment"
+        ],
+        "object_id": "2",
+        "object_repr": "2017-02-24 - 1 - machu@test.com",
         "action_flag": 3,
         "change_message": ""
     }
