@@ -397,36 +397,6 @@
     }
 },
 {
-    "model": "appointments.appointment",
-    "pk": 1,
-    "fields": {
-        "patient_name": [
-            "frankmullen@test.com"
-        ],
-        "appointment_date": "2017-02-27T09:00:00Z"
-    }
-},
-{
-    "model": "appointments.appointment",
-    "pk": 2,
-    "fields": {
-        "patient_name": [
-            "frankmullen@test.com"
-        ],
-        "appointment_date": "2017-02-27T08:30:00Z"
-    }
-},
-{
-    "model": "appointments.appointment",
-    "pk": 3,
-    "fields": {
-        "patient_name": [
-            "josh@test.com"
-        ],
-        "appointment_date": "2017-03-02T11:00:00Z"
-    }
-},
-{
     "model": "threads.subject",
     "pk": 1,
     "fields": {
@@ -1141,24 +1111,6 @@
 },
 {
     "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2017-02-11T07:05:16.658Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "1",
-        "object_repr": "Appointment object",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
     "pk": 21,
     "fields": {
         "action_time": "2017-02-16T08:56:00.910Z",
@@ -1353,114 +1305,6 @@
         "object_repr": "Healthy Kids' Teeth",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-        "action_time": "2017-02-18T10:32:26.340Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "1",
-        "object_repr": "Appointment object",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-        "action_time": "2017-02-19T10:39:41.073Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "1",
-        "object_repr": "Appointment object",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-        "action_time": "2017-02-19T10:50:52.643Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "4",
-        "object_repr": "Appointment object",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-        "action_time": "2017-02-19T10:50:52.668Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "3",
-        "object_repr": "Appointment object",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 42,
-    "fields": {
-        "action_time": "2017-02-19T10:50:52.682Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "2",
-        "object_repr": "Appointment object",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 43,
-    "fields": {
-        "action_time": "2017-02-19T10:50:52.703Z",
-        "user": [
-            "frankmullen@test.com"
-        ],
-        "content_type": [
-            "appointments",
-            "appointment"
-        ],
-        "object_id": "1",
-        "object_repr": "Appointment object",
-        "action_flag": 3,
-        "change_message": ""
     }
 },
 {
