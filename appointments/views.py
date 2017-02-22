@@ -14,13 +14,16 @@ def create_appointment(request):
             form = AppointmentForm(request.POST, instance=user)
             if form.is_valid():
                 date = form.cleaned_data['appointment_date'],
+                time = form.cleaned_data['appointment_time']
 
                 appointment = Appointment()
                 appointment.appointment_date = date[0]
+                appointment.appointment_time = time
                 appointment.patient_name_id = user.id
                 appointment.save()
 
                 print 'date is: ' + str(date[0])
+                print 'time is: ' + str(time)
                 print 'user is: ' + str(user.id)
 
                 return redirect(reverse('appointments'))
