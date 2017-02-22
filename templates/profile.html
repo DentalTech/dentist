@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
-    <p>Your stripe id is {{ user.stripe_id }} </p>
-    <h2>Subscription Details</h2>
-    <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
-    <p>To cancel your subscription click 'Cancel Subscription' below</p>
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Profile</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
+<div class="wrap margin-block">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>Success!</h2>
+    <hr>
+    <p>Thank you, for signing up. You are logged in as {{ user.email }} </p>
+    <p>To create an appointment click 'CreateAppointment' below</p>
+    <hr>
     <p>
-        <a href="{% url "cancel_subscription" %}"
-           onclick="return cancelSubscriptionCheck();"
-           class="btn btn-danger">Cancel Subscription</a>
+        <a href="{% url "create_appointment" %}"
+           class="btn btn-primary">Create Appointment</a>
     </p>
+</div><!--end col-md-12-->
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
 
-
-    <script type="text/javascript">
-        function cancelSubscriptionCheck() {
-            if (confirm('Are you sure you want to cancel?')) {
-                return true;
-            }
-            return false;
-        }
-    </script>
 {% endblock %}

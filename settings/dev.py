@@ -18,6 +18,8 @@ DATABASES = {
     }
 }
 
+INTERNAL_IPS = ('127.0.0.1')
+
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_VD1FVRfbUP6JqJVoHfkcKCZ4')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_n8TB3tJYW7cNBjkopYL3aKm1')
