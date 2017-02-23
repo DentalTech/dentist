@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from accounts.models import User
+from accounts.models import User, Family
 from django.core.exceptions import ValidationError
 
 
@@ -28,9 +28,10 @@ class UserRegistrationForm(UserCreationForm):
         widget=forms.PasswordInput
     )
 
+
     class Meta:
         model = User
-        fields = ['email', 'password1', 'password2']
+        fields = ['number_family','email', 'password1', 'password2']
         exclude = ['username']
 
     def clean_password2(self):
@@ -54,6 +55,23 @@ class UserRegistrationForm(UserCreationForm):
 
         return instance
 
+
 class UserLoginForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+
+class FamilyForm(forms.ModelForm):
+    '''
+    def __init__(self, number_family, *args, **kwargs):
+        super(FamilyForm, self).__init__(*args, **kwargs)
+        for i in range(0, number_family):
+            self.fields["first_name"] = forms.CharField()
+            self.fields["last_name"] = forms.CharField()
+            '''
+    class Meta:
+        model = Family
+        exclude = ['account_name']
+
+
+

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Main User</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for family in families %}
+                {% if family.account_name.id == user.id %}
+                    <tr>
+                        <td>{{ family.id }}</td>
+                        <td>{{ family.first_name }}</td>
+                        <td>{{ family.last_name }}</td>
+                        <td>{{ family.account_name }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

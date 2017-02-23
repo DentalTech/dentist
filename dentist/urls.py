@@ -36,6 +36,8 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
+    url(r'^family_members/$', accounts_views.family_member_details, name='family_member_details'),
+    url(r'^families/$', accounts_views.all_families, name='families'),
 
     #Blog URLs
     url(r'^blog/$', blog_views.post_list, name="post_list"),
