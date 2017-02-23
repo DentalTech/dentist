@@ -35,8 +35,8 @@ def register(request):
 
                     for x in range(family_number):
                         family_member = Family()
-                        family_member.first_name = ''
-                        family_member.last_name = ''
+                        get_full_name = 'family_' + str(x+1)
+                        family_member.full_name = form.cleaned_data[get_full_name]
                         family_member.account_name_id = user.id
                         family_member.save()
 
@@ -139,5 +139,6 @@ def family_member_details(request):
 def all_families(request):
     families = Family.objects.all()
     return render(request, "families.html", {"families": families})
+
 
 

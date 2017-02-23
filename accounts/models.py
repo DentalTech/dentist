@@ -38,8 +38,7 @@ class User(AbstractUser):
 
 class Family(models.Model):
     account_name = models.ForeignKey(User)
-    first_name = models.CharField(max_length=35, default='')
-    last_name = models.CharField(max_length=35, default='')
+    full_name = models.CharField(max_length=35, default='')
 
     def __unicode__(self):
         return self.first_name + " " + self.last_name

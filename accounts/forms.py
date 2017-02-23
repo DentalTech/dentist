@@ -11,7 +11,9 @@ class UserRegistrationForm(UserCreationForm):
     ]
     MONTH_CHOICES = list(enumerate(MONTH_ABBREVIATIONS, 1))
     YEAR_CHOICES = [(i, i) for i in xrange(2017, 2036)]
-
+    family_1 = forms.CharField(label='Full Name')
+    family_2 = forms.CharField(label='Family Member 2 Full Name')
+    family_3 = forms.CharField(label='Family Member 3 Full Name')
     credit_card_number = forms.CharField(label='Credit card number')
     cvv = forms.CharField(label='Security code (CVV)')
     expiry_month = forms.ChoiceField(label="Month", choices=MONTH_CHOICES)
@@ -27,7 +29,6 @@ class UserRegistrationForm(UserCreationForm):
         label='Password Confirmation',
         widget=forms.PasswordInput
     )
-
 
     class Meta:
         model = User
