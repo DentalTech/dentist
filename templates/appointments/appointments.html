@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Your Appointments</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
 
+<div class="wrap margin-block">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -20,5 +33,9 @@
             {% endfor %}
         </tbody>
     </table>
+</div><!--end col-md-12-->
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
 
 {% endblock %}

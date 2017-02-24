@@ -1,12 +1,31 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
+<div class="wrap">
+<div class="container home-apoint">
+<div class="row">
+<div class="col-md-12 home-apoint-text">
+<h2>Login</h2>
+</div>
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
+<div class="wrap margin-block">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
     <form role="form" method="post" action="{% url 'login' %}">
-        <legend>Login</legend>
+
         {% csrf_token %}
         {{ form| as_bootstrap }}
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
+</div><!--end col-md-12-->
+</div><!--end row-->
+</div><!--end container-->
+</div><!--end wrap-->
+
 {% endblock %}
