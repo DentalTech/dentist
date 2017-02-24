@@ -11,13 +11,12 @@
         </thead>
         <tbody>
             {% for appointment in appointments %}
-                {% if appointment.patient_name_id == user.id %}
                     <tr>
                         <td>{{ appointment.appointment_date }}</td>
                         <td>{{ appointment.appointment_time }}</td>
                         <td>{{ appointment.patient_name }}</td>
                     </tr>
-                {% endif %}
+
             {% endfor %}
         </tbody>
     </table>

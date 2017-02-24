@@ -51,7 +51,7 @@ urlpatterns = [
     url(r'^services/$', service_views.all_services, name='services'),
 
     #Appointments URLs
-    url(r'^appointments/$', appointment_views.all_appointments, name='appointments'),
+    url(r'^appointments/$', appointment_views.get_user_appointments, name='appointments'),
     url(r'^create_appointment/$', appointment_views.create_appointment, name='create_appointment'),
 
     # Forum URLs
