@@ -14,19 +14,20 @@
 {% endblock %}
 
 {% block forumcontent %}
-
+<div class ="container">
 <ol class="breadcrumb pull-left where-am-i">
     <li><a href="/forum/">Forum</a></li>
     <li class="active">{{ subject.name }}</li>
     <!--<li><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></li>-->
 
     </ol>
-<div class="container new-thread">
+</div>
+<div class="container">
 
 
     {% if user.is_authenticated %}
         <p>
-            <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+            <a href="{% url 'new_thread' subject.id %}" class="btn btn-info">New Thread</a>
         </p>
     {% endif %}
 

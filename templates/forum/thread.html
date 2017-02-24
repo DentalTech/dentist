@@ -37,33 +37,21 @@
 </div>
 <br/>
 <div class="container">
-     <h2>{{ thread.name }}</h2>
-     <div class="col-md-12">
-         <table class="table">
-             <tbody>
-             <tr>
-                 <th>
-                   CREATED
-                 </th>
-                 <th>OWNER</th>
-                 <th>LAST POST</th>
-             </tr>
-             <tr>
-                 <td>
-                   <time datetime="{{ thread.created_at }}">
-                    {{ thread.created_at|started_time }}
-                   </time>
-                 </td>
-                 <td>{{ thread.user.username }}</td>
-                 <td>{% last_posted_user_name thread %}</td>
-             </tr>
-           </tbody>
-         </table>
-     </div>
+
         {% if thread.poll %}
+
            <div class="container">
-               <div class="col-md-6">
-                   <h2>Poll</h2>
+
+               <div class="col-md-8 thread-box">
+                   <h3>{{ thread.name }}</h3>
+                <hr>
+                   {% for post in thread.posts.all %}
+                    {% include "forum/post.html" %}
+                    {% endfor %}
+               </div>
+
+               <div class="col-md-4 poll-box">
+                   <h3>Poll</h3>
                    <strong>{{ thread.poll.question }}</strong><br><br>
 
                    <p>Here’s how the votes are so far:</p>
@@ -84,6 +72,19 @@
                   {% endfor %}
                </div>
            </div>
+        {% else %}
+            <div class="container">
+
+               <div class="col-md-12 thread-box">
+                   <h3>{{ thread.name }}</h3>
+                <hr>
+                   {% for post in thread.posts.all %}
+                    {% include "forum/post.html" %}
+                    {% endfor %}
+               </div>
+
+
+           </div>
        {% endif %}
 
      {% if user.is_authenticated %}
@@ -92,12 +93,7 @@
        </p>
      {% endif %}
    </div>
- </div>
- <div class="container">
-   {% for post in thread.posts.all %}
-     {% include "forum/post.html" %}
-   {% endfor %}
- </div>
+
 
 {% endblock %}
 

@@ -687,7 +687,11 @@ margin-top:22px;}
 }
 
 .new-thread p {
-    padding-left: 250px;
+    display:inline;
+}
+
+.poll-box {
+    border:1px solid rgb(39,39,42);
 }
 /**** END FORUM STYLES*****/
 
