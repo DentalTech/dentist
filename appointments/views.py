@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 from .models import Appointment
 from .forms import AppointmentForm
 from django.template.context_processors import csrf
+from accounts.models import Family
 
 
 def create_appointment(request):
@@ -15,11 +16,14 @@ def create_appointment(request):
             if form.is_valid():
                 date = form.cleaned_data['appointment_date'],
                 time = form.cleaned_data['appointment_time']
+                patient_name = form.cleaned_data['patient_name']
+                family = Family.objects.get(full_name=patient_name).id
+                print('family: ' + str(family))
 
                 appointment = Appointment()
                 appointment.appointment_date = date[0]
                 appointment.appointment_time = time
-                appointment.patient_name_id = user.id
+                appointment.patient_name_id = family
                 appointment.save()
 
                 print 'date is: ' + str(date[0])
