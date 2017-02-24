@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'emoticons',
     'threads',
     'polls',
+    'django_gravatar'
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
 
 # tinymce settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+GRAVATAR_DEFAULT_IMAGE ="http://www.gravatar.com/avatar/?d=retro"

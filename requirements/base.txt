@@ -18,4 +18,5 @@ six==1.10.0
 sqlparse==0.2.2
 stripe==1.46.0
 whitenoise==3.3.0
+django-gravatar2=1.4.0
 
