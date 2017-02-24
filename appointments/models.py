@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from accounts.models import User
+from accounts.models import Family
 from django.db import models
 from datetime import date
 
@@ -20,7 +20,7 @@ class Appointment(models.Model):
     SLOT13 = '16:00'
     SLOT14 = '16:30'
 
-    patient_name = models.ForeignKey(User)
+    patient_name = models.ForeignKey(Family)
     appointment_date = models.DateField(default=date.today)
     appointment_time_choices = (
         (SLOT1, '08:30'),

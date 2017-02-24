@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
 from django.utils import timezone
-from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class AccountUserManager(UserManager):
@@ -32,7 +31,7 @@ class User(AbstractUser):
     number_family = models.IntegerField(
         default=1,
         choices=[(i,i) for i in range(1, 11)],
-        verbose_name="Number of Family Members")
+        verbose_name="Number of family members (including you)")
     objects = AccountUserManager()
 
 
@@ -41,5 +40,5 @@ class Family(models.Model):
     full_name = models.CharField(max_length=35, default='')
 
     def __unicode__(self):
-        return self.first_name + " " + self.last_name
+        return self.full_name
 

@@ -34,6 +34,7 @@ def register(request):
                     user.save()
 
                     for x in range(family_number):
+
                         family_member = Family()
                         get_full_name = 'family_' + str(x+1)
                         family_member.full_name = form.cleaned_data[get_full_name]
