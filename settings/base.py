@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'emoticons',
     'threads',
     'polls',
-    'django_gravatar'
+    'django_gravatar',
 ]
 
 MIDDLEWARE = [

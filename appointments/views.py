@@ -4,15 +4,21 @@ from .models import Appointment
 from .forms import AppointmentForm
 from django.template.context_processors import csrf
 from accounts.models import Family
+from django import forms
 
 
 def create_appointment(request):
 
     user = request.user
 
+    AppointmentForm.base_fields['patient_name'] = forms.ModelChoiceField(
+        queryset=Family.objects.filter(account_name_id=user.id))
+
     if user.is_authenticated:
         if request.method == 'POST':
+
             form = AppointmentForm(request.POST, instance=user)
+
             if form.is_valid():
                 date = form.cleaned_data['appointment_date'],
                 time = form.cleaned_data['appointment_time']
