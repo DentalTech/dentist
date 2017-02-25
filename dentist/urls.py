@@ -29,7 +29,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.get_index, name='index'),
     url(r'^ourteam/$', views.get_ourteam, name='ourteam'),
-
+    url(r'^contact/$', views.get_contact, name='contact'),
+    url(r'^contact_thanks/$', views.get_contact_thanks, name='contact_thanks'),
     #Authentication URLs
     url(r'^membership/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
@@ -65,7 +66,6 @@ urlpatterns = [
     url(r'^post/delete/(?P<thread_id>\d+)/(?P<post_id>\d+)/$', forum_views.delete_post, name='delete_post'),
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$', forum_views.thread_vote, name='cast_vote'),
 
-    # Contact URLs
 
 ]
 
