@@ -51,31 +51,20 @@ def create_appointment(request):
 
 def get_user_appointments(request):
 
-
     user = request.user
-
 
     appointments = Appointment.objects.all()
     family_appointments = []
 
-    print user.id
-    family = Family.objects.all()
-
-    for item in family:
-        print item
-
     all_family = Family.objects.filter(account_name_id=user.id)
-
-    for item in all_family:
-        print item.id
+    print all_family[0].full_name
 
     for person in all_family:
         for appointment in appointments:
-            print appointment.patient_name_id
             if appointment.patient_name_id == person.id:
                 family_appointments.append(appointment)
 
-        print family_appointments
+
 
     return render(request, "appointments/appointments.html", {"appointments": family_appointments})
 

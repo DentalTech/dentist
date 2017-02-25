@@ -2,6 +2,7 @@ import arrow
 from django import template
 from django.core.urlresolvers import reverse
 from django.utils.html import mark_safe
+from accounts.models import Family
 
 register = template.Library()
 
@@ -15,6 +16,7 @@ def get_total_subject_posts(subject):
 
 @register.filter
 def get_total_thread_posts(thread):
+
     return thread.posts.count()
 
 
@@ -68,3 +70,12 @@ def vote_percentage(subject):
        return 0
    total_votes = subject.poll.votes.count()
    return (100 / total_votes) * count
+
+@register.assignment_tag
+def get_poster_name(post):
+    user_id = post.user.id
+    all_family = Family.objects.filter(account_name_id=user_id)
+
+    full_name = all_family[0].full_name
+
+    return full_name

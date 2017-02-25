@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load account_extras %}
 {% block head_js %}
 <script>
   $(function() {
@@ -19,7 +19,7 @@
 <div class="container home-apoint">
 <div class="row">
 <div class="col-md-12 home-apoint-text">
-<h2>Create Appointment</h2>
+<h2>Create Appointment - {% get_full_name user %} and Family</h2>
 </div>
 </div><!--end row-->
 </div><!--end container-->

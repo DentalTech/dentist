@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load account_extras %}
 {% block content %}
 <div class="wrap">
 <div class="container home-apoint">
 <div class="row">
 <div class="col-md-12 home-apoint-text">
-<h2>Your Appointments</h2>
+<h2>Appointments for {% get_full_name user %} and Family</h2>
 </div>
 </div><!--end row-->
 </div><!--end container-->
@@ -17,17 +18,17 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Time</th>
                 <th>Patient Name</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
             </tr>
         </thead>
         <tbody>
             {% for appointment in appointments %}
                     <tr>
+                        <td>{{ appointment.patient_name }}</td>
                         <td>{{ appointment.appointment_date }}</td>
                         <td>{{ appointment.appointment_time }}</td>
-                        <td>{{ appointment.patient_name }}</td>
                     </tr>
 
             {% endfor %}
@@ -37,6 +38,8 @@
 
         <a href="{% url "create_appointment" %}"
            class="btn btn-primary">Create Another Appointment</a>
+        <a href="{% url "profile" %}"
+           class="btn btn-primary">View Profile</a>
 
 </div>
 </div><!--end col-md-12-->

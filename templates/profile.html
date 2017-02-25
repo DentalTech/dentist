@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load account_extras %}
 {% block content %}
 <div class="wrap">
 <div class="container home-apoint">
 <div class="row">
 <div class="col-md-12 home-apoint-text">
-<h2>Profile</h2>
+<h2>User Profile for {% get_full_name user %}</h2>
 </div>
 </div><!--end row-->
 </div><!--end container-->
@@ -13,17 +14,60 @@
 <div class="wrap margin-block">
 <div class="container">
 <div class="row">
-<div class="col-md-12">
-<h2>Success!</h2>
-    <hr>
-    <p>Thank you, for signing up. You are logged in as {{ user.email }} </p>
-    <p>To create an appointment click 'CreateAppointment' below</p>
-    <hr>
-    <p>
+<div class="col-md-19">
+
+
+<table class="table table-striped-column">
+	<tr>
+		<th>Name</th>
+		<td>
+			{% get_full_name user %}
+
+		</td>
+	</tr>
+	<tr>
+		<th>Email</th>
+		<td>{{ user.email }}</td>
+	</tr>
+	<tr>
+		<th>Number of Family Members</th>
+		<td>{{ user.number_family }}</td>
+	</tr>
+    <tr>
+		<th>Date Joined</th>
+		<td>{{ user.date_joined }}</td>
+	</tr>
+    <tr>
+		<th>Next Payment Date</th>
+		<td>{{ user.subscription_end }}</td>
+	</tr>
+    <tr>
+		<th>Last Login</th>
+		<td>{{ user.last_login }}</td>
+	</tr>
+    <tr>
+		<th>Stripe ID</th>
+		<td>{{ user.stripe_id }}</td>
+	</tr>
+</table>
+
+        <a href="{% url "appointments" %}"
+           class="btn btn-primary">View Appointments</a>
+
         <a href="{% url "create_appointment" %}"
            class="btn btn-primary">Create Appointment</a>
-    </p>
-</div><!--end col-md-12-->
+
+		<a href="{% url "post_list" %}"
+           class="btn btn-primary">Go To Blog</a>
+
+		<a href="{% url "forum" %}"
+           class="btn btn-primary">Go To Forum</a>
+
+        <a href="{% url "cancel_subscription" %}"
+           class="btn btn-danger">Cancel Subscription</a>
+
+
+</div><!--end col-md-9-->
 </div><!--end row-->
 </div><!--end container-->
 </div><!--end wrap-->

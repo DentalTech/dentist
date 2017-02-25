@@ -38,7 +38,6 @@
 
 
 
-
 </div><!--end row-->
 <!--
 	<div class="prev-next">
@@ -48,3 +47,11 @@
 </div><!--end col-md-9-->
 
 {% endblock %}
+
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script type="text/javascript">
+      //<![CDATA[
+      Stripe.publishableKey = '{{ publishable }}';
+      //]]>
+  </script>
+  <script type="text/javascript" src="{% static "js/stripe.js" %}"></script>

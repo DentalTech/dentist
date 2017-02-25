@@ -47,7 +47,7 @@ def register(request):
                 if user:
                     auth.login(request, user)
                     messages.success(request, "You have successfully registered")
-                    return redirect(reverse('profile'))
+                    return redirect(reverse('success'))
                 else:
                     messages.error(request, "unable to log you in at this time!")
 
@@ -69,6 +69,11 @@ def register(request):
 @login_required(login_url='/login/')
 def profile(request):
     return render(request, 'profile.html')
+
+
+@login_required(login_url='/login/')
+def success(request):
+    return render(request, 'success.html')
 
 
 def login(request):
@@ -136,6 +141,7 @@ def family_member_details(request):
         args['form']=form
 
         return render(request, 'family_members.html', args)
+
 
 def all_families(request):
     families = Family.objects.all()

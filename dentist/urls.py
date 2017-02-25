@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
     url(r'^family_members/$', accounts_views.family_member_details, name='family_member_details'),
     url(r'^families/$', accounts_views.all_families, name='families'),
+    url(r'^success/$', accounts_views.success, name='success'),
 
     #Blog URLs
     url(r'^blog/$', blog_views.post_list, name="post_list"),
@@ -55,7 +56,7 @@ urlpatterns = [
     url(r'^create_appointment/$', appointment_views.create_appointment, name='create_appointment'),
 
     # Forum URLs
-    url(r'^forum/$', forum_views.forum),
+    url(r'^forum/$', forum_views.forum, name="forum"),
     url(r'^threads/(?P<subject_id>\d+)/$', forum_views.threads, name='threads'),
     url(r'^new_thread/(?P<subject_id>\d+)/$',  forum_views.new_thread, name='new_thread'),
     url(r'^thread/(?P<thread_id>\d+)/$', forum_views.thread, name='thread'),

@@ -695,6 +695,9 @@ margin-top:22px;}
 }
 /**** END FORUM STYLES*****/
 
+.table-striped-column > tbody > tr td:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
 
 @media (min-width: 1200px) {
 .wrap, .mainWrap{width:1200px;}

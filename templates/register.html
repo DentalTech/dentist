@@ -3,7 +3,7 @@
 {% load staticfiles %}
 
 {% block head_js %}
-<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
   <script type="text/javascript">
       //<![CDATA[
       Stripe.publishableKey = '{{ publishable }}';
@@ -253,4 +253,3 @@ window.onload = function() {
 </script>
 
 {% endblock %}
-
