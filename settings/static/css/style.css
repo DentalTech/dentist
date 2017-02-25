@@ -749,6 +749,10 @@ aside{margin-top:55px;}
 #submit{margin-bottom:44px;}
 }
 
+.alert-message {
+    background-colour:yellow;
+}
+
 @media (max-width: 480px) {
 .logo{float:none;}
 nav{width:55%;
