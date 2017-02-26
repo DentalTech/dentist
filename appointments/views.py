@@ -5,6 +5,8 @@ from .forms import AppointmentForm
 from django.template.context_processors import csrf
 from accounts.models import Family
 from django import forms
+from django.db import IntegrityError
+from django.contrib import messages
 
 
 def create_appointment(request):
@@ -20,23 +22,22 @@ def create_appointment(request):
             form = AppointmentForm(request.POST, instance=user)
 
             if form.is_valid():
-                date = form.cleaned_data['appointment_date'],
-                time = form.cleaned_data['appointment_time']
-                patient_name = form.cleaned_data['patient_name']
-                family = Family.objects.get(full_name=patient_name).id
-                print('family: ' + str(family))
+                try:
+                    date = form.cleaned_data['appointment_date'],
+                    time = form.cleaned_data['appointment_time']
+                    patient_name = form.cleaned_data['patient_name']
+                    family = Family.objects.get(full_name=patient_name).id
 
-                appointment = Appointment()
-                appointment.appointment_date = date[0]
-                appointment.appointment_time = time
-                appointment.patient_name_id = family
-                appointment.save()
+                    appointment = Appointment()
+                    appointment.appointment_date = date[0]
+                    appointment.appointment_time = time
+                    appointment.patient_name_id = family
+                    appointment.save()
 
-                print 'date is: ' + str(date[0])
-                print 'time is: ' + str(time)
-                print 'user is: ' + str(user.id)
+                    return redirect(reverse('appointments'))
 
-                return redirect(reverse('appointments'))
+                except IntegrityError as e:
+                    messages.error(request, "That patient already has an appointment")
 
         else:
             form = AppointmentForm()

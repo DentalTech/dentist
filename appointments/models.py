@@ -20,7 +20,7 @@ class Appointment(models.Model):
     SLOT13 = '16:00'
     SLOT14 = '16:30'
 
-    patient_name = models.ForeignKey(Family)
+    patient_name = models.OneToOneField(Family)
     appointment_date = models.DateField()
     appointment_time_choices = (
         (SLOT1, '08:30'),

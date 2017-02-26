@@ -41,7 +41,7 @@ The project has 3 models:
 
 - User - all the user account info, excluding full name, which is passed to:
 - Family - since the user can add family members to his/her account, I created a separate model for family members. This is effectively a Patient model, with User as foreign key. The user passes his/her and family members' full names to the database, and then these patients are used to create:
-- Appointment - each patient can create appointments, with Family member as a foreign key. It should be one appointment per family member, but that functionality may not be implemented by the project deadline.
+- Appointment - each patient can create appointments, with Family member as a OneToOneField so each patient can only have one appointment.
 
 ## Challenges Faced
 
