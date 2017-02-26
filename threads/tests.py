@@ -1,8 +1,8 @@
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.shortcuts import render_to_response
 from .models import Subject
 
-
+@override_settings(STATICFILES_STORAGE=None)
 class SubjectPageTest(TestCase):
 
     fixtures = ['subjects', 'user']

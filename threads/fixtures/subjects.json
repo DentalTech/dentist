@@ -1,0 +1,122 @@
+[
+{
+    "model": "threads.subject",
+    "pk": 1,
+    "fields": {
+        "name": "Brushing",
+        "description": "<p>Do you have questions about brushing? Ask them here!</p>"
+    }
+},
+{
+    "model": "threads.subject",
+    "pk": 2,
+    "fields": {
+        "name": "Flossing",
+        "description": "<p>Tips and tricks on the latest flossing tools and techniques.</p>"
+    }
+},
+{
+    "model": "threads.subject",
+    "pk": 3,
+    "fields": {
+        "name": "Gum Health",
+        "description": "<p>Worried about your gums? Get free advice here.</p>"
+    }
+},
+{
+    "model": "threads.subject",
+    "pk": 4,
+    "fields": {
+        "name": "Services",
+        "description": "<p>Ask questions about any of our treatments.</p>"
+    }
+},
+{
+    "model": "threads.subject",
+    "pk": 5,
+    "fields": {
+        "name": "Admin",
+        "description": "<p>Let us know if there's anything we can do to make your life easier.</p>"
+    }
+},
+{
+    "model": "threads.thread",
+    "pk": 13,
+    "fields": {
+        "name": "How many times do you brush your teeth each day?",
+        "user": 1,
+        "subject": 1,
+        "created_at": "2017-02-25T02:35:25.941Z"
+    }
+},
+{
+    "model": "threads.thread",
+    "pk": 14,
+    "fields": {
+        "name": "What are the best flossing techniques?",
+        "user": 1,
+        "subject": 2,
+        "created_at": "2017-02-25T02:35:25.941Z"
+    }
+},
+{
+    "model": "threads.thread",
+    "pk": 15,
+    "fields": {
+        "name": "I'm worried about my gums",
+        "user": 13,
+        "subject": 3,
+        "created_at": "2017-02-25T02:35:25.941Z"
+    }
+},
+{
+    "model": "threads.post",
+    "pk": 18,
+    "fields": {
+        "thread": 13,
+        "comment": "<p>I brush twice, after breakfast and before going to bed.</p>",
+        "user": 1,
+        "created_at": "2017-02-25T02:35:25.944Z"
+    }
+},
+{
+    "model": "threads.post",
+    "pk": 19,
+    "fields": {
+        "thread": 14,
+        "comment": "<p>List all your favourite techniques here.</p>",
+        "user": 1,
+        "created_at": "2017-02-25T02:35:25.944Z"
+    }
+},
+{
+    "model": "threads.post",
+    "pk": 20,
+    "fields": {
+        "thread": 15,
+        "comment": "<p>Sometimes they bleed when I brush my teeth. Should I have a checkup?</p>",
+        "user": 13,
+        "created_at": "2017-02-25T02:35:25.944Z"
+    }
+},
+{
+    "model": "threads.post",
+    "pk": 21,
+    "fields": {
+        "thread": 13,
+        "comment": "<p>Three times for me!</p>",
+        "user": 13,
+        "created_at": "2017-02-25T02:35:25.944Z"
+    }
+},
+{
+    "model": "threads.post",
+    "pk": 22,
+    "fields": {
+        "thread": 13,
+        "comment": "<p>Oh gosh, I only brush once, how bad is that!</p>",
+        "user": 14,
+        "created_at": "2017-02-25T02:35:25.944Z"
+    }
+}
+]

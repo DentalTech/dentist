@@ -17,6 +17,16 @@ stripe.api_key = settings.STRIPE_SECRET
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
+
+        # make additional family name fields 'required = True'
+        number = int(request.POST['number_family'])
+
+        if number > 1:
+            for x in range(2, number + 1):
+                field_name = 'family_' + str(x)
+                form.fields[field_name].required = True
+                print field_name + str(form.fields[field_name].required)
+
         if form.is_valid():
             try:
                 family_number = form.cleaned_data['number_family']
@@ -55,7 +65,7 @@ def register(request):
                 messages.error(request, "Your card was declined!")
 
         else:
-            messages.error(request, "We were unable to take a payment with that card!")
+            messages.error(request, "Please fix the errors on the form!")
     else:
         today = datetime.date.today()
         form = UserRegistrationForm()

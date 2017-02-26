@@ -16,7 +16,6 @@ class CustomUserTest(TestCase):
             user = User.objects._create_user(None, None, "password",
                                              False, False)
 
-
     def test_registration_form_with_one_family_member(self):
         form = UserRegistrationForm({
             'number_family': '1',
@@ -50,25 +49,6 @@ class CustomUserTest(TestCase):
         })
 
         self.assertTrue(form.is_valid())
-
-
-    def test_registration_form_fails_with_missing_family_member_name(self):
-        form = UserRegistrationForm({
-            'number_family': '2',
-            'email': 'test@test.com',
-            'password1': 'letmein1',
-            'password2': 'letmein1',
-            'family_1': 'Test Name',
-            'family_2': '',
-            'stripe_id': settings.STRIPE_SECRET,
-            'credit_card_number': 4242424242424242,
-            'cvv': 123,
-            'expiry_month': 1,
-            'expiry_year': 2018
-        })
-
-        self.assertFalse(form.is_valid())
-
 
     def test_registration_form_fails_with_missing_email(self):
         form = UserRegistrationForm({

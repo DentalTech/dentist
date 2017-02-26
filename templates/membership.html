@@ -98,9 +98,15 @@
 
     <script>
 
-function hide_family_names() {
+function listen_to_field_number() {
     document.addEventListener("change", function(){
-        if(document.getElementById('id_number_family').options[document.getElementById('id_number_family').selectedIndex].value == '1') {
+        show_hide_field_names()
+    });
+};
+
+function show_hide_field_names() {
+
+    if(document.getElementById('id_number_family').options[document.getElementById('id_number_family').selectedIndex].value == '1') {
              document.getElementById('div_id_family_1').style.display = '';
              document.getElementById('div_id_family_2').style.display = 'none';
              document.getElementById('div_id_family_3').style.display = 'none';
@@ -231,21 +237,10 @@ function hide_family_names() {
              document.getElementById('div_id_family_10').style.display = '';
              document.getElementById('show_price').innerHTML="10 memberships = €97.50 per month";
         }
-    });
 };
-
 window.onload = function() {
-    document.getElementById('div_id_family_1').style.display = '';
-   document.getElementById('div_id_family_2').style.display = 'none';
-   document.getElementById('div_id_family_3').style.display = 'none';
-   document.getElementById('div_id_family_4').style.display = 'none';
-   document.getElementById('div_id_family_5').style.display = 'none';
-   document.getElementById('div_id_family_6').style.display = 'none';
-   document.getElementById('div_id_family_7').style.display = 'none';
-   document.getElementById('div_id_family_8').style.display = 'none';
-   document.getElementById('div_id_family_9').style.display = 'none';
-   document.getElementById('div_id_family_10').style.display = 'none';
-    hide_family_names();
+   show_hide_field_names();
+    listen_to_field_number();
 };
 
 
