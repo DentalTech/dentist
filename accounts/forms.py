@@ -70,13 +70,7 @@ class UserLoginForm(forms.Form):
 
 
 class FamilyForm(forms.ModelForm):
-    '''
-    def __init__(self, number_family, *args, **kwargs):
-        super(FamilyForm, self).__init__(*args, **kwargs)
-        for i in range(0, number_family):
-            self.fields["first_name"] = forms.CharField()
-            self.fields["last_name"] = forms.CharField()
-            '''
+
     class Meta:
         model = Family
         exclude = ['account_name']
