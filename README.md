@@ -45,7 +45,7 @@ The project has 3 models:
 
 ## Challenges Faced
 
-As this was my first solo Django Project, I faced a huge number of challenges. These included:
+As this was my first solo Django Project, I faced a huge number of challenges, and on quite a few occasions spent more than an hour figuring out a single line of code. Challenges and accomplishments included:
 
 - Learning my way around Django's Model-View-Template structure and figuring out all the different settings and URLs.
 
@@ -72,6 +72,11 @@ I ran out of time as the submission deadline approached, and the following are o
 - The 'recent news' section in the blog should link to recent blog posts
 - After separating my settings file I had an error retrieving static files, which I resolved by moving the static files into the settings directory. I'm not sure which settings to fix to move it back out of there.
 - I don't have a satisfactory level of unit testing coverage (Appointments App not covered yet).
+- 2 appointments can be created at the same time.
+- I couldn't save the Stripe keys as environment variables.
+- Users can't currently reschedule appointments.
+
+
 
 
 
