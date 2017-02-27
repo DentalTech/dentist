@@ -61,11 +61,17 @@ As this was my first solo Django Project, I faced a huge number of challenges. T
 
 ## Testing 
 
-Testing has definitely been the weakest point of the project. Even though I've tested the site functionality manually very extensively, I've spent so much time on the functionality that I haven't spent much time at all on Unit Testing.
+Some Unit Testing was performed, but this is definitely the weakest part of the project. At first I didn't get the importance of testing, as I was testing everything manually, but as the website grew it became clear that I needed it and in future projects the tests should be written at the same time as the rest of the code.
 
-## Cloning
+## Outstanding Issues
 
-If you decide to clone this website, please be aware that the settings have been separated into files for development and staging, and are in their own settings folder. You need to use `--settings=setting.dev` when using any of the `python manage.py` command.
+I ran out of time as the submission deadline approached, and the following are outstanding issues:
+
+- The appointments date picker can pick dates from the past and weekend dates when the surgery is closed.
+- The last post in the forum is showing as 'John Doe' rather than picking the last poster.
+- The 'recent news' section in the blog should link to recent blog posts
+- After separating my settings file I had an error retrieving static files, which I resolved by moving the static files into the settings directory. I'm not sure which settings to fix to move it back out of there.
+- I don't have a satisfactory level of unit testing coverage (Appointments App not covered yet).
 
 
 

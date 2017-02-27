@@ -58,7 +58,6 @@ def get_user_appointments(request):
     family_appointments = []
 
     all_family = Family.objects.filter(account_name_id=user.id)
-    print all_family[0].full_name
 
     for person in all_family:
         for appointment in appointments:

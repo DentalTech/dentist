@@ -10,8 +10,6 @@ import stripe
 import arrow
 from .models import Family
 
-
-
 stripe.api_key = settings.STRIPE_SECRET
 
 
@@ -27,6 +25,8 @@ def register(request):
                 field_name = 'family_' + str(x)
                 form.fields[field_name].required = True
                 print field_name + str(form.fields[field_name].required)
+
+        print stripe.api_key
 
         if form.is_valid():
             try:
