@@ -14,7 +14,7 @@ The user can add up to a total of 10 family members to his/her account, set up a
 
 There is also a blog and discussion forum that includes poll functionality. Although part of our training including learning how to allow the user post their own blog posts, a design decision was taken to not include this functionality.
 
-To navigate the site, it is advised to set up a dummy account, using a fake email address and the Stripe dummy credit card number 4242 4242 4242 4242. Other fields can be any valid numbers: CVV - 3 digits, and expiry dates a future month.
+To navigate the site and see all the functionality, it is advised to set up a dummy account with at least 2 family members, using a fake email address and the Stripe dummy credit card number 4242 4242 4242 4242. Other fields can be any valid numbers: CVV - 3 digits, and expiry dates a future month.
 
 ## Technologies
 
@@ -29,7 +29,7 @@ The application was built using the following framework/languages:
 
 ## Design
 
-- A paid Bootstrap theme from MOJO themes was used. This theme didn't include forum, so I used the [template No. 4 from Tutorialzine here](http://tutorialzine.com/2015/06/12-time-saving-bootstrap-examples/).
+- A paid Bootstrap theme from MOJO themes was used. This theme didn't include a forum, so I used the [template No. 4 from Tutorialzine here](http://tutorialzine.com/2015/06/12-time-saving-bootstrap-examples/).
 
 - All images were sourced from [Pixabay](https://pixabay.com/), a free royalty-free images site.
 
